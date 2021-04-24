@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import HomeImg from '../Images/Laptop-rb.png'
+
 import '../Screens/Home.css'
 const CommonComp =(props)=>{
   return(
