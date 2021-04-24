@@ -1,9 +1,16 @@
 import React from 'react'
+import CommonComp  from '../Components/CommonComp'
+import AboutImg from '../Images/rover-rb.png'
 
 const About =()=>{
   return(
     <>
-    <h1>Welcome to About.js</h1>
+     <CommonComp
+      name="Welcome to About page"
+      imgSrc={AboutImg}
+      visit="/Contact"
+      btname="Contact Now"
+      />
     </>
   )
 }
