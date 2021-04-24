@@ -1,6 +1,6 @@
 import React from 'react'
 import CommonComp  from '../Components/CommonComp'
-import AboutImg from '../Images/rover-rb.png'
+import AboutImg from '../Images/building-rb.png'
 
 const About =()=>{
   return(
