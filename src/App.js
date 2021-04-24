@@ -9,7 +9,7 @@ import Services from './Screens/Services'
 import NavBar from './Components/NavBar'
 const App =()=>{
   return(
-    <div style={{textAlign:'center'}}>
+    <>
     <NavBar />
     <Switch>
       <Route exact path="/" component={Home}/>
@@ -18,7 +18,7 @@ const App =()=>{
       <Route exact path="/contact" component={Contact}/>
       <Redirect to="/"/>
     </Switch>
-    </div>
+    </>
   )
 }
 
