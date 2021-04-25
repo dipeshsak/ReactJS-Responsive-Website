@@ -2,17 +2,17 @@ import React,{useState} from 'react'
 
 const Contact =()=>{
 
- const [data,setData] = useState({
-   fullname:"",
-   phone:"",
-   email:"",
-   msg:""
- })
  
+ const [fn,setFn] = useState()
+ const [email,setEmail] = useState()
+ const [phone,setPhone] = useState()
+ const [msg,setMsg] = useState()
+
   
 
-  const formSubmit=()=>{
-    
+  const formSubmit=(e)=>{
+    e.preventDefault()
+    alert("My Name is : "+fn+" My email is : "+email+" Mobile number : " + phone +" I want to say : "+msg)
   }
   return(
     <>
@@ -23,29 +23,29 @@ const Contact =()=>{
          <div className="row">
            <div className="col-md-6 col-10 mx-auto">
            <form onSubmit={formSubmit}>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Full Name</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" 
+  <div className="form-group">
+    <label>Full Name</label>
+    <input type="text" className="form-control" id="exampleFormControlInput1" 
     placeholder="Enter Full Name"
     name="fullname"
-    onChange={InputEvent}
-    value={data.fullname}
+    onChange={(e)=>setFn(e.target.value)}
+    value={fn}
     />
   </div>
 
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" name="email" id="exampleFormControlInput1" value={data.email} placeholder="name@example.com" onChange={InputEvent}/>
+  <div className="form-group">
+    <label >Email address</label>
+    <input type="email" className="form-control" name="email" id="exampleFormControlInput1" value={email} placeholder="name@example.com" onChange={(e)=>setEmail(e.target.value)}/>
   </div>
 
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Phone</label>
-    <input type="number" class="form-control" name="phone" id="exampleFormControlInput1" value={data.phone} placeholder="Enter your mobile number" onChange={InputEvent}/>
+  <div className="form-group">
+    <label >Phone</label>
+    <input type="number" className="form-control" name="phone" id="exampleFormControlInput1" value={phone} placeholder="Enter your mobile number" onChange={(e)=>setPhone(e.target.value)}/>
   </div>
 
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Message</label>
-    <textarea class="form-control" name="msg" id="exampleFormControlTextarea1" rows="3"  value={data.msg} onChange={InputEvent}></textarea>
+  <div className="form-group">
+    <label >Message</label>
+    <textarea className="form-control" name="msg" id="exampleFormControlTextarea1" rows="3"  value={msg} onChange={(e)=>setMsg(e.target.value)}></textarea>
   </div>
 
   <div className="col-12">
